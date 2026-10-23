@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saved Jobs - JobFinder AI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .saved-page {
+            min-height: 100vh;
+            background: #f5f7fb;
+            padding: 32px;
+        }
+
+        .saved-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+        }
+
+        .saved-header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #111827;
+        }
+
+        .saved-header p {
+            margin-top: 6px;
+            color: #64748b;
+        }
+
+        .saved-count {
+            background: #eef2ff;
+            color: #4f46e5;
+            padding: 12px 18px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .saved-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .job-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+        }
+
+        .job-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .job-info h2 {
+            margin: 0;
+            color: #111827;
+            font-size: 23px;
+        }
+
+        .company {
+            color: #64748b;
+            margin-top: 6px;
+            font-size: 16px;
+        }
+
+        .match {
+            background: #dcfce7;
+            color: #059669;
+            padding: 9px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .job-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin-top: 18px;
+            color: #475569;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .skill {
+            background: #f1f5f9;
+            color: #334155;
+            padding: 6px 12px;
+            border-radius: 7px;
+            font-size: 13px;
+        }
+
+        .job-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .apply-btn {
+            border: none;
+            background: #4f46e5;
+            color: white;
+            padding: 11px 20px;
+            border-radius: 9px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .remove-btn {
+            border: 1px solid #fecaca;
+            background: #fff5f5;
+            color: #dc2626;
+            padding: 11px 20px;
+            border-radius: 9px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .apply-btn:hover {
+            background: #4338ca;
+        }
+
+        .remove-btn:hover {
+            background: #fee2e2;
+        }
+
+        .empty-state {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 70px 30px;
+            text-align: center;
+        }
+
+        .empty-icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .empty-state h2 {
+            margin: 0;
+            color: #111827;
+        }
+
+        .empty-state p {
+            color: #64748b;
+            margin: 10px 0 24px;
+        }
+
+        .find-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #4f46e5;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 9px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 700px) {
+            .saved-page {
+                padding: 20px;
+            }
+
+            .saved-header {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .job-top {
+                flex-direction: column;
+            }
+
+            .job-actions {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="saved-page">
+
+    <div class="saved-container">
+
+        <!-- Header -->
+        <div class="saved-header">
+
+            <div>
+                <h1>❤️ Saved Jobs</h1>
+                <p>Jobs you saved for later.</p>
+            </div>
+
+            <div class="saved-count">
+                <span id="savedCount">0</span> Saved Jobs
+            </div>
+
+        </div>
+
+        <!-- Jobs -->
+        <div id="savedJobsContainer"></div>
+
+    </div>
+
+</div>
+
+<script src="js/saved-jobs.js"></script>
+
+</body>
+</html>

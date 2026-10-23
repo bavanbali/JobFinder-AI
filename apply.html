@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apply for Job | JobFinder AI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            💼 <span>JobFinder <b>AI</b></span>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="find-jobs.html">
+                🔎 Find Jobs
+            </a>
+
+            <a href="#">
+                🤖 AI Matches
+            </a>
+
+            <a href="#">
+                💗 Saved Jobs
+            </a>
+
+            <a href="#">
+                📋 Applications
+            </a>
+
+            <a href="#">
+                📄 My Resume
+            </a>
+
+            <a href="#">
+                👤 Profile
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#">
+                ⚙️ Settings
+            </a>
+
+            <a href="login.html" onclick="logout()">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div>
+                <h1>Apply for Job</h1>
+                <p>Complete your application and submit it to the employer.</p>
+            </div>
+
+            <div class="profile-circle">
+                B
+            </div>
+
+        </header>
+
+
+        <!-- APPLICATION AREA -->
+        <section class="application-wrapper">
+
+            <!-- JOB INFORMATION -->
+            <div class="job-summary">
+
+                <div class="job-icon">
+                    💼
+                </div>
+
+                <div>
+
+                    <h2 id="jobTitle">
+                        Loading Job...
+                    </h2>
+
+                    <p id="jobCompany">
+                        Loading Company...
+                    </p>
+
+                    <div class="job-details">
+
+                        <span id="jobLocation">
+                            📍 Location
+                        </span>
+
+                        <span id="jobSalary">
+                            💰 Salary
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- APPLICATION FORM -->
+            <div class="application-card">
+
+                <h2>Application Form</h2>
+
+                <p class="form-subtitle">
+                    Enter your details carefully before submitting.
+                </p>
+
+
+                <form id="applicationForm">
+
+
+                    <!-- FULL NAME -->
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PHONE -->
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter your phone number"
+                            maxlength="10"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- RESUME -->
+                    <div class="form-group">
+
+                        <label for="resume">
+                            Upload Resume *
+                        </label>
+
+                        <input
+                            type="file"
+                            id="resume"
+                            accept=".pdf,.doc,.docx"
+                            required
+                        >
+
+                        <small>
+                            Accepted formats: PDF, DOC, DOCX
+                        </small>
+
+                    </div>
+
+
+                    <!-- COVER MESSAGE -->
+                    <div class="form-group">
+
+                        <label for="message">
+                            Cover Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="6"
+                            placeholder="Write a short message to the employer..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- TERMS -->
+                    <div class="checkbox-group">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <label for="terms">
+                            I confirm that the information provided is correct.
+                        </label>
+
+                    </div>
+
+
+                    <!-- BUTTONS -->
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            class="cancel-btn"
+                            onclick="goBack()"
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="submit-btn"
+                        >
+                            Submit Application →
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/apply.js"></script>
+
+</body>
+</html>

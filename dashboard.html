@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - JobFinder AI</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body class="app-page">
+
+
+<div class="app-layout">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            💼
+            <span>
+                JobFinder
+                <b>AI</b>
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <a
+                href="dashboard.html"
+                class="nav-item active"
+            >
+                🏠
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="find-jobs.html"
+                class="nav-item"
+            >
+                🔎
+                <span>Find Jobs</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+                onclick="comingSoon(event)"
+            >
+                🤖
+                <span>AI Matches</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+                onclick="comingSoon(event)"
+            >
+                💗
+                <span>Saved Jobs</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+                onclick="comingSoon(event)"
+            >
+                📋
+                <span>Applications</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+                onclick="comingSoon(event)"
+            >
+                📄
+                <span>My Resume</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+                onclick="comingSoon(event)"
+            >
+                👤
+                <span>Profile</span>
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+
+            <a
+                href="#"
+                class="nav-item"
+                onclick="comingSoon(event)"
+            >
+                ⚙️
+                <span>Settings</span>
+            </a>
+
+
+            <button
+                id="logoutButton"
+                class="logout-btn"
+            >
+                🚪
+                <span>Logout</span>
+            </button>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+
+        <header class="dashboard-header">
+
+
+            <div>
+
+                <h1>
+                    Good morning,
+                    <span id="userName">
+                        User
+                    </span>
+                    👋
+                </h1>
+
+                <p>
+                    Find your next opportunity today.
+                </p>
+
+            </div>
+
+
+            <div class="user-circle">
+                <span id="userInitial">
+                    B
+                </span>
+            </div>
+
+
+        </header>
+
+
+
+        <!-- SEARCH -->
+
+        <div class="dashboard-search">
+
+            🔎
+
+            <input
+                type="text"
+                id="dashboardSearch"
+                placeholder="Search jobs, skills, companies..."
+            >
+
+            <button
+                onclick="goToJobs()"
+            >
+                Search
+            </button>
+
+        </div>
+
+
+
+        <!-- STATS -->
+
+        <div class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🔥
+                </div>
+
+                <div>
+
+                    <span>
+                        Active Jobs
+                    </span>
+
+                    <strong>
+                        1,240+
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🤖
+                </div>
+
+                <div>
+
+                    <span>
+                        AI Matches
+                    </span>
+
+                    <strong>
+                        24
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    💗
+                </div>
+
+                <div>
+
+                    <span>
+                        Saved Jobs
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📋
+                </div>
+
+                <div>
+
+                    <span>
+                        Applications
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- RECOMMENDED -->
+
+        <section class="recommended-section">
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>
+                        Recommended for You
+                    </h2>
+
+                    <p>
+                        Jobs based on your profile and skills.
+                    </p>
+
+                </div>
+
+
+                <a href="find-jobs.html">
+                    View All →
+                </a>
+
+            </div>
+
+
+
+            <!-- JOB 1 -->
+
+            <div class="job-card">
+
+
+                <div class="job-left">
+
+
+                    <div class="job-icon">
+                        💻
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Software Developer
+                        </h3>
+
+                        <p class="company">
+                            Technology Company
+                        </p>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                📍 Chandigarh
+                            </span>
+
+                            <span>
+                                💼 Full Time
+                            </span>
+
+                        </div>
+
+
+                        <div class="skills">
+
+                            <span>
+                                Java
+                            </span>
+
+                            <span>
+                                Python
+                            </span>
+
+                            <span>
+                                SQL
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="job-right">
+
+                    <span class="match">
+                        94% Match
+                    </span>
+
+                    <button
+                        onclick="goToJobs()"
+                    >
+                        Apply Now →
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- JOB 2 -->
+
+            <div class="job-card">
+
+
+                <div class="job-left">
+
+
+                    <div class="job-icon">
+                        💻
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Java Developer
+                        </h3>
+
+                        <p class="company">
+                            IT Solutions
+                        </p>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                📍 India
+                            </span>
+
+                            <span>
+                                💼 Full Time
+                            </span>
+
+                        </div>
+
+
+                        <div class="skills">
+
+                            <span>
+                                Java
+                            </span>
+
+                            <span>
+                                Spring Boot
+                            </span>
+
+                            <span>
+                                MySQL
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="job-right">
+
+                    <span class="match">
+                        91% Match
+                    </span>
+
+                    <button
+                        onclick="goToJobs()"
+                    >
+                        Apply Now →
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script
+    type="module"
+    src="js/dashboard.js"
+></script>
+
+
+<script>
+
+function goToJobs() {
+
+    window.location.href = "find-jobs.html";
+
+}
+
+
+function comingSoon(event) {
+
+    event.preventDefault();
+
+    alert("This feature will be available soon.");
+
+}
+
+</script>
+
+
+</body>
+
+</html>
